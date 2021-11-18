@@ -1,0 +1,75 @@
+<section class="checkout-order">
+  <div class="container">
+    <h1 class="title checkout-order__title">Shopping cart</h1>
+    <div class="checkout-order__wrapper">
+      <div class="checkout-order__top flex">
+        <h2 class="checkout-order__heading checkout-order__product">Product</h2>
+        <h2 class="checkout-order__heading checkout-order__price">Price</h2>
+        <h2 class="checkout-order__heading checkout-order__number">Number</h2>
+        <h2 class="checkout-order__heading checkout-order__cost">Cost</h2>
+      </div>
+      @@include('../bem-blocks/_order-card.html',{
+        "checkout__elem": "checkout-order__card",
+        "order-card__img": "garlic.jpg",
+        "order-card__title": "Deiss® PRO Garlic Press & Peeler Set",
+        "order-card__price": "10.99",
+        "order-card__cost": "21.98",
+        "value": "2",
+        "active": "order-card__checkmark--active"
+      })
+      @@include('../bem-blocks/_order-card.html',{
+        "checkout__elem": "checkout-order__card",
+        "order-card__img": "slicer.jpg",
+        "order-card__title": "Deiss® PRO Pineapple Corer& Slicer",
+        "order-card__price": "10.99",
+        "order-card__cost": "32.87",
+        "value": "3",
+        "active": "order-card__checkmark--active"
+      })
+      @@include('../bem-blocks/_order-card.html',{
+        "checkout__elem": "checkout-order__card",
+        "order-card__img": "grater.jpg",
+        "order-card__title": "Deiss® PRO Wide Cheese Grater & Lemon Zester",
+        "order-card__price": "10.99",
+        "order-card__cost": "10.99",
+        "value": "1",
+      })
+
+      <div class="checkout-order__bottom">
+        <div class="checkout-order__row flex --just-space">
+          <form action="#" class="promo-form">
+              <div class="promo-form__title">Promo code</div>
+              <div class="promo-form__wrapper promo-form__wrapper--success">
+                <div class="promo-form__cross"></div>
+                <input type="text" class="promo-form__input" placeholder="Enter promo code">
+                <button class="promo-form__btn" type="submit">Apply</button>
+                <div class="promo-form__error">the promo code is entered incorrectly</div>
+                <div class="promo-form__success">promo code successfully activated!</div>
+              </div>
+          </form>
+          <div class="total-cost">
+            <div class="total-cost__wrapper">
+              <div class="total-cost__col">
+                <div class="total-cost__heading">Cost</div>
+                <div class="total-cost__price"> <span>$</span>65.94</div>
+              </div>
+              <div class="total-cost__col">
+                <div class="total-cost__heading">Discount</div>
+                <div class="total-cost__price total-cost__price--error">-<span>$</span>5.00</div>
+              </div>
+            </div>
+            <div class="total-cost__title">Total cost</div>
+            <div class="total-cost__price"> <span>$</span>65.94</div>
+          </div>
+        </div>
+
+        <div class="checkout-order__row flex --just-space">
+          <a href="#" class="btn checkout-order__back">Back to shopping</a>
+          <a href="#" class="btn checkout-order__checkout">Checkout</a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>

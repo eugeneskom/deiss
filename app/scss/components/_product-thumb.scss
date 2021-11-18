@@ -1,0 +1,73 @@
+.product-thumb {
+  display: flex;
+  background-color: $bg_secondary;
+  &__box {
+    max-width: 120px;
+    width: 100%;
+    max-height: 120px;
+    height: 100%;
+    position: relative;
+    margin-right: 13px;
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
+  &__svg {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 9px;
+    height: 8px;
+  }
+
+  &__wrapper{
+    position: relative;
+    max-width: 200px;
+    width: 100%;
+  }
+
+  &__title{
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    &--wish{
+      max-width: 180px;
+    }
+  }
+
+  &__price{
+    margin-bottom: 15px;
+  }
+
+  &__btn{
+    padding: 7px;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: $bg_highlight;
+    color: $bg_secondary;
+    min-width: 180px;
+
+    &:hover{
+      background-color:  $bg_secondary;
+      color: $bg_highlight;
+    }
+  }
+
+  &__close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 13px;
+    height: 13px;
+    background-image: url('../images/icons/cross.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &:hover{
+      cursor: pointer;
+    }
+
+  }
+}

@@ -1,0 +1,122 @@
+.promo-form {
+  max-width: 368px;
+  margin-bottom: 37px;
+
+  &__title {
+    border: 2px solid $t_main;
+    border-radius: 10px;
+    padding: 11px 20px;
+    background-color: $bg_secondary;
+    @include g-bold;
+    margin-bottom: 10px;
+  }
+  &__error,
+  &__success{
+    display: none;
+  }
+
+  &__wrapper {
+    display: flex;
+
+    &--error {
+      position: relative;
+
+      .promo-form {
+
+        &__input,
+        &__btn {
+          border-color: $error;
+        }
+
+        &__cross {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 120px;
+          width: 12px;
+          height: 12px;
+          background-image: url('../images/icons/red-cross.png');
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+
+        }
+
+        &__error {
+          display: block;
+          position: absolute;
+          left: 20px;
+          bottom: -15px;
+          font-size: 8px;
+          color: $error;
+        }
+      }
+    }
+
+    &--success {
+
+      position: relative;
+
+      .promo-form {
+
+        &__cross {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 120px;
+          width: 16px;
+          height: 16px;
+          background-image: url('../img/icons/success-mark.png');
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        &__success {
+          display: block;
+          position: absolute;
+          left: 20px;
+          bottom: -15px;
+          font-size: 8px;
+          color: $success;
+        }
+      }
+    }
+
+  }
+
+  &__input {
+    background: $bg_secondary;
+    border: 2px solid $t_main;
+    box-sizing: border-box;
+    border-radius: 10px 0px 0px 10px;
+    padding: 17px 20px 16px;
+    text-transform: uppercase;
+    @include m-regular;
+
+    &::placeholder {
+      text-transform: uppercase;
+      color: rgba($t_main, 0.5);
+    }
+
+  }
+
+  &__btn {
+    background: $bg_highlight;
+    border: 2px solid $t_main;
+    border-radius: 0px 10px 10px 0px;
+    color: $bg_secondary;
+    @include g-bold;
+    text-transform: uppercase;
+    padding: 16px 22px 15px 24px;
+    margin-left: -4px;
+    max-width: 100px;
+    width: 100%;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+
+}

@@ -1,0 +1,76 @@
+.checkout-order {
+  background-color: $bg_light;
+  padding: 50px 0 70px;
+  text-transform: uppercase;
+
+
+
+  &__product {
+    width: 47%;
+  }
+
+  &__price {
+    width: 15%;
+  }
+
+  &__number {
+    width: 24%;
+  }
+
+  &__cost {
+    width: 14%;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__top,
+  &__card {
+    background: $bg_secondary;
+    border: 2px solid $t_main;
+    border-radius: 10px;
+  }
+
+  &__top {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+  }
+
+  &__heading {
+    @include g-bold;
+
+  }
+
+  &__card {
+    padding: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__back {
+    color: $bg_highlight;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $bg_highlight;
+      color: $bg_secondary;
+    }
+  }
+
+  &__checkout {
+    color: $bg_secondary;
+    background-color: $bg_highlight;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $bg_secondary;
+      color: $bg_highlight;
+
+    }
+  }
+
+
+}

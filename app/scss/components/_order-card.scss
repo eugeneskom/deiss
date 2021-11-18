@@ -1,0 +1,73 @@
+.order-card{
+  position: relative;
+
+  &__checkmark{
+    position: absolute;
+    left: -30px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius:50%;
+    border: 2px solid $t_main;
+    background-color: $bg_secondary;
+    &:hover{
+      cursor: pointer;
+    }
+    &--active{
+      background-color: $bg_highlight;
+      background-image: url('../images/icons/checkmark.png');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__product{
+    width: 47%;
+  }
+  &__price{
+    width: 15%;
+  }
+  &__number{
+    width: 24%;
+  }
+  &__cost{
+    width: 14%;
+  }
+  &__img{
+    max-width:120px;
+    width: 100%;
+    max-height: 120px;
+    height: 100%;
+    margin-right: 20px;
+  }
+  &__title{
+    @include g-bold;
+    font-size: calc( (100vw - 370px)/(1152 - 370) * (16 - 10) + 10px);
+    max-width: 210px;
+    width: 100%;
+  }
+  &__cost{
+    @include g-bold;
+  }
+
+  &__close{
+    position: absolute;
+    top: 22px;
+    right: 21px;
+    width: 12px;
+    height: 12px;
+    &:hover{
+      cursor: pointer;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      background-image: url('../img/icons/cross.png');
+      background-size: cover;
+      width: 12px;
+      height: 12px;
+      top: 0;
+      left: 0;
+    }
+  }
+  
+}

@@ -1,0 +1,88 @@
+@mixin text-clamp($lines: 2, $line-height: false) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+
+  // Fallback for non-Webkit browsers
+  // (won't show `…` at the end of the block)
+  @if $line-height {
+    max-height: $line-height * $lines * 1px;
+  }
+}
+
+@mixin line-clamp($font-size,
+  $line-height,
+  $lines-to-show) {
+  @if unitless($line-height)==false {
+    $line-height: create-unitless-line-height($font-size, $line-height);
+  }
+
+  display: block; // Fallback for non-webkit browsers
+  display: -webkit-box;
+  font-size: $font-size;
+  height: ($font-size * $line-height * $lines-to-show); // Fallback for non-webkit browsers
+  line-height: $line-height;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines-to-show;
+}
+
+@mixin r($width) {
+  @media only screen and (max-width: $width+ "px") {
+    @content;
+  }
+}
+
+@mixin rmin($width) {
+  @media only screen and (min-width: $width+ "px") {
+    @content;
+  }
+}
+
+
+@mixin g-bold {
+  font-family: GothamBold, OpenSans-Bold, sans-serif;
+}
+
+@mixin m-regular {
+  font-family: Montserrat-Regular, OpenSans-Regular, sans-serif;
+}
+
+@mixin no-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+@mixin btn {
+  display: inline-block;
+  border-radius: 60px;
+  text-decoration: none;
+  border: 3px solid $bg_highlight;
+  padding: 11px 41px;
+  min-width: 250px;
+  text-align: center;
+  @include g-bold;
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: $bg_highlight;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  &:hover{
+    background-color: $bg_highlight;
+    color: $bg_secondary;
+  }
+}
+
+@mixin no-btn ($display:"inline-block") {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  border-radius: 0;
+  cursor: pointer;
+  appearance: none;
+  display: #{$display};
+}

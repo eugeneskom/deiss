@@ -1,0 +1,25 @@
+<div class="nav-container">
+
+  <div class="nav-container__inner">
+
+    <h2 class="nav-container__title">Searched products</h2>
+    
+    <div class="nav-container__content">
+      @@include('_product-thumb.html',{
+        "nav-container__elem": "nav-container__product",
+        "nav-container__img": "1",
+        "nav-container__title": "Deiss® PRO Citrus Lemon Zester & Cheese Grater",
+        "nav-container__price": "10.99",
+      })
+      @@include('_product-thumb.html',{
+        "nav-container__elem": "nav-container__product",
+        "nav-container__img": "2",
+        "nav-container__title": "Deiss® PRO Wide Cheese Grater & Lemon Zester",
+        "nav-container__price": "10.99",
+      })
+    </div>
+    
+    <a href="#" class="btn nav-container__btn">Go to catalogue</a>
+    
+  </div>
+</div>

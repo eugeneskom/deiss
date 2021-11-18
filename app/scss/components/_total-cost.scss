@@ -1,0 +1,39 @@
+.total-cost {
+  max-width: 342px;
+  width: 100%;
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__col{
+    max-width: 160px;
+    width: 100%;
+  }
+
+  &__title,
+  &__price {
+    border: 2px solid $t_main;
+    border-radius: 10px;
+    padding: 11px 20px;
+    background-color: $bg_secondary;
+    @include g-bold;
+    margin-bottom: 10px;
+  }
+
+  &__heading{
+    border: 2px solid $t_main;
+    border-radius: 10px;
+    padding: 11px 20px;
+    background-color: $bg_secondary;
+    @include g-bold;
+    margin-bottom: 10px;
+  }
+
+  &__price{
+    &--error{
+      color: $error;
+    }
+  }
+
+
+}

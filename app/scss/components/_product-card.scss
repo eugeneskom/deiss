@@ -1,0 +1,100 @@
+.product-card {
+  // max-width: 300px;
+  // width: calc((100% - 100px) / 3);
+  // width: 100%;
+  // max-width: 300px;
+  max-width: 300px;
+
+  &:hover{
+    .product-card{
+      &__eye{
+        opacity: 1;
+      }
+    }
+  }
+
+  &__top {
+    max-height: 300px;
+    height: 100%;
+    position: relative;
+    margin-bottom: 11px;
+  }
+  &__category{
+    color: $bg_highlight;
+    text-transform: uppercase;
+    @include g-bold;
+    font-weight: 700;
+  }
+
+
+  &__img {
+    display: block;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__cta {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__category {
+    position: absolute;
+  }
+
+  &__eye {
+    width: 24px;
+    height: 14px;
+    cursor:pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+  }
+
+  &__eye-svg {
+    width: 100%;
+    height: 100%;
+    fill: $t_main;
+  }
+
+  &__heart {
+    height: 20px;
+    width: 16px;
+    cursor:pointer;
+  }
+
+  &__heart-svg {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: $bg_highlight;
+  }
+
+  &__title {
+    @include g-bold;
+    text-transform: uppercase;
+    font-size: calc((100vw - 370px)/(1152 - 370) * (16 - 10) + 10px);
+    margin-bottom: 5px;
+  }
+
+  &__price {
+    font-size: calc((100vw - 370px)/(1152 - 370) * (14 - 8) + 8px);
+    margin-bottom: 10px;
+  }
+
+  &__btn {
+    background-color: $bg_highlight;
+    color: $bg_secondary;
+    min-width: 100%;
+    &--added{
+      background-color: $bg_secondary;
+      color: $bg_highlight;
+    }
+  }
+}

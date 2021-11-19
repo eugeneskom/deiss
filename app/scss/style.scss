@@ -5,7 +5,7 @@
 @import 'fonts';
 @import 'customclasses';
 @import 'global';
-@import 'pages/cart';
+@import 'pages/checkout';
 @import 'components/order-card';
 @import 'components/product-counter';
 @import 'components/promo-form';
@@ -16,3 +16,6 @@
 @import 'components/nav-container';
 @import 'components/signup-form';
 @import 'components/registered-container';
+@import 'components/account-container';
+@import 'components/search-form';
+@import 'components/account-navigation';

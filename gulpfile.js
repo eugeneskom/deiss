@@ -67,8 +67,8 @@ function images() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
-    'node_modules/swiper/swiper-bundle.js',
-    'node_modules/swiper/swiper-bundle.js.map',
+    // 'node_modules/swiper/swiper-bundle.js',
+    // 'node_modules/swiper/swiper-bundle.js.map',
     'app/js/main.js',
 
   ])

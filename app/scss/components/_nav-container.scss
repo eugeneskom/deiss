@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    position: relative; /// for swiper
 
 
   }
@@ -75,8 +75,12 @@
 
     }
 
-    &--signup{
+    &--signup {
       margin-bottom: 0;
+    }
+
+    &.swiper {
+      max-width: 390px;
     }
 
   }
@@ -113,7 +117,6 @@
     }
   }
 
-
   &__login {
     margin-bottom: 10px;
     background-color: $bg_highlight;
@@ -125,6 +128,44 @@
     }
   }
 
+  &__total{
+    display: flex;
+    justify-content: space-between;
+  }
 
 
+
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+  outline: none;
+
+
+  &__prev {
+    left: -25px;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__next {
+    right: -25px;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 24px;
+    stroke: $t_main;
+
+    &:hover {
+      stroke: $bg_highlight;
+    }
+  }
 }

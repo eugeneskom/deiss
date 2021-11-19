@@ -7,6 +7,10 @@
 
   &__product {
     width: 47%;
+
+    @include r($r-lg) {
+      width: 35%;
+    }
   }
 
   &__price {
@@ -15,10 +19,18 @@
 
   &__number {
     width: 24%;
+
+    @include r($r-lg) {
+      width: 35%;
+    }
   }
 
   &__cost {
     width: 14%;
+
+    @include r($r-lg) {
+      width: 20%;
+    }
   }
 
   &__title {
@@ -48,12 +60,24 @@
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+
+    @include r($r-md){
+      padding: 10px;
+    }
+  }
+
+  &__row{
+    @include r($r-lg){
+      flex-direction: column;
+    }
   }
 
   &__back {
     color: $bg_highlight;
     transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-
+    @include r($r-lg){
+      margin-bottom: 10px;
+    }
     &:hover {
       background-color: $bg_highlight;
       color: $bg_secondary;

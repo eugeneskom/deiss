@@ -6,22 +6,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="dark-bg">
   <main class="main">
-    @@include('../parts/bem-blocks/_nav-container.html')
-    @@include('../parts/bem-blocks/_wish-container.html')
-    @@include('../parts/bem-blocks/_popular-container.html')
-    @@include('../parts/bem-blocks/_profile-container.html')
-    @@include('../parts/bem-blocks/_signup-container.html')
+    <div class="container">
+
+      @@include('../parts/bem-blocks/_account-navigation.html')
+      @@include('../parts/bem-blocks/_cart-container.html')
+
+      <!-- @@include('../parts/bem-blocks/_nav-container.html') 
+        @@include('../parts/bem-blocks/_wish-container.html')
+        @@include('../parts/bem-blocks/_popular-container.html')
+        @@include('../parts/bem-blocks/_profile-container.html')
+        @@include('../parts/bem-blocks/_signup-container.html')
     @@include('../parts/bem-blocks/_registred-container.html')
     @@include('../parts/bem-blocks/_login-container.html')
-
+    @@include('../parts/bem-blocks/_account-container.html',{
+    "account__title": "account__title",
+    })
+    @@include('../parts/bem-blocks/_account-container.html',{
+      "account-avatar": "account__avatar--true"
+    }) -->
+    
+  </div>
 
   </main>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="js/main.min.js"></script>
+  <script src="js/swiper.js"></script>
 
 </body>
 

@@ -4,34 +4,45 @@
 
     <h2 class="nav-container__title">Popular products</h2>
 
-    <div class="nav-container__content nav-container__content--popular">
-      <div class="nav-container__swiper">
+    <div class="nav-container__content swiper">
+      <div class="nav-container__swiper swiper-wrapper">
 
         @@include('_product-thumb-popular.html',{
-        "popular__elem": "nav-container__popular",
+        "popular__elem": "nav-container__popular swiper-slide",
         "nav-container__img": "1",
         "nav-container__title": "Garlic press <span>pro</span>",
         "nav-container__price": "10.99",
         })
         @@include('_product-thumb-popular.html',{
-        "popular__elem": "nav-container__popular",
+        "popular__elem": "nav-container__popular swiper-slide",
         "nav-container__img": "2",
         "nav-container__title": "Pineapple corer <span>pro</span>",
         "nav-container__price": "10.99",
         })
         @@include('_product-thumb-popular.html',{
-        "popular__elem": "nav-container__popular",
+        "popular__elem": "nav-container__popular swiper-slide",
         "nav-container__img": "2",
         "nav-container__title": "Wide Grater <span>pro</span>",
         "nav-container__price": "10.99",
         })
         @@include('_product-thumb-popular.html',{
-        "popular__elem": "nav-container__popular",
+        "popular__elem": "nav-container__popular swiper-slide",
         "nav-container__img": "2",
         "nav-container__title": "Wide Grater <span>pro</span>",
         "nav-container__price": "10.99",
         })
       </div>
+
+    </div>
+    <div class="swiper-button-next-unique slider-arrow slider-arrow__prev">
+      <svg class="slider-arrow__icon">
+        <use xlink:href="sprite.svg#arrow-left"></use>
+      </svg>
+    </div>
+    <div class="swiper-button-prev-unique slider-arrow slider-arrow__next">
+      <svg class="slider-arrow__icon">
+        <use xlink:href="sprite.svg#arrow-right"></use>
+      </svg>
     </div>
 
     <a href="#" class="btn nav-container__btn">Go to catalogue</a>

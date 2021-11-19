@@ -1,0 +1,86 @@
+.account-nav {
+  position: relative;
+
+
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__item {
+    position: relative;
+
+    .content-block {
+      position: absolute;
+      right: 0;
+      display: none;
+
+      &__search {
+        max-width: 485px;
+        width: 100%;
+        margin-bottom: 41px;
+      }
+
+      &__content {
+        width: max-content;
+        transform: translateX(-115px);
+      }
+
+    }
+
+    &:hover {
+      .content-block {
+        display: block;
+      }
+    }
+    &--user {
+
+      .content-block {
+        &__content {
+          transform: translate(3px, 30px);
+        }
+      }
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    background-color: $bg_secondary;
+    background-size: cover;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $success;
+      cursor: pointer;
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &--search {
+      mask: url('../images/icons/search.svg');
+    }
+
+    &--heart {
+      mask: url('../images/icons/heart.svg');
+    }
+
+    &--user {
+      mask: url('../images/icons/user.svg');
+
+      & .content-block {
+        &__content {
+          transform: translateX(-10px);
+
+        }
+      }
+    }
+
+    &--cart {
+      mask: url('../images/icons/cart.svg');
+    }
+  }
+
+}

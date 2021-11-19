@@ -22,15 +22,28 @@
   }
   &__product{
     width: 47%;
+    @include r($r-lg){
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+    }
+
   }
   &__price{
     width: 15%;
   }
   &__number{
     width: 24%;
+    @include r($r-lg){
+      width: 35%;
+    }
+
   }
   &__cost{
     width: 14%;
+    @include r($r-lg){
+      width: 10%;
+    }
   }
   &__img{
     max-width:120px;
@@ -38,12 +51,33 @@
     max-height: 120px;
     height: 100%;
     margin-right: 20px;
+    @include r($r-lg){
+      margin-bottom: 10px;
+      margin-right: 0;
+      max-width: 110px;
+    }
+    @include r($r-md){
+      margin-bottom: 10px;
+      margin-right: 0;
+      max-width: 90px;
+    }
+    @include r($r-sm){
+      margin-bottom: 10px;
+      margin-right: 0;
+      max-width: 60px;
+    }
   }
   &__title{
     @include g-bold;
     font-size: calc( (100vw - 370px)/(1152 - 370) * (16 - 10) + 10px);
-    max-width: 210px;
+    max-width: 230px;
     width: 100%;
+    @include r(1000){
+      padding-right: 25px;
+    }
+    @include r($r-md){
+      padding-right: 15px;
+    }
   }
   &__cost{
     @include g-bold;

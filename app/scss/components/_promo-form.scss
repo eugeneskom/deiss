@@ -10,8 +10,9 @@
     @include g-bold;
     margin-bottom: 10px;
   }
+
   &__error,
-  &__success{
+  &__success {
     display: none;
   }
 
@@ -93,6 +94,7 @@
     padding: 17px 20px 16px;
     text-transform: uppercase;
     @include m-regular;
+    outline: transparent;
 
     &::placeholder {
       text-transform: uppercase;
@@ -102,7 +104,7 @@
   }
 
   &__btn {
-    background: $bg_highlight;
+    background-color: $bg_highlight;
     border: 2px solid $t_main;
     border-radius: 0px 10px 10px 0px;
     color: $bg_secondary;
@@ -110,10 +112,12 @@
     text-transform: uppercase;
     padding: 16px 22px 15px 24px;
     margin-left: -4px;
-    max-width: 100px;
     width: 100%;
+    font-weight: 700;
 
     &:hover {
+      background-color: $bg_secondary;
+      color: $bg_highlight;
       cursor: pointer;
     }
   }
